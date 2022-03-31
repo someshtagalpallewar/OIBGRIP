@@ -1,6 +1,8 @@
-package internship;  //Package name
+package internship;  
+//Package name
 
-import java.time.LocalDate;             //Importing Packages
+import java.time.LocalDate;             
+//Importing Packages
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -8,18 +10,20 @@ import java.util.Scanner;
 
 public class Task2 {
 
-	public static void main(String[] args)   //Main Method. The execution starts from this method
+	public static void main(String[] args)   
+		//Main Method. The execution starts from this method
 	{
 		
-		String accname = "Soham Chotalia";    //Declaring the account details
-		String branchname = "Borivali (west)";
-		String branchaddress = "C-002, Vasundra Apartment, SV Road, Borivali (west), Mumbai";
-		String branchIFSC = "OBC287945";
+		String accname = "Somesh Tagalpallewar";   
+		//Declaring the account details
+		String branchname = "Dombivli";
+		String branchaddress = "vasundra apartment, Mumbai";
+		String branchIFSC = "ABC684685";
 		
-		int accnumber = 24873678;
-		int password = 2111;
+		int accnumber = 5522994466;
+		int password = 0000;
 		int balance = 0;
-		int minbal = 1000;
+		int minbal = 500;
 		boolean flag = true;
 		boolean flagb = true;
 		boolean flagc = true;
@@ -27,23 +31,30 @@ public class Task2 {
 		int attempt = 5;
 		int currattempt = 0;
 		
-		LocalDate tarik = LocalDate.now();  // Declaring the date format
+		LocalDate tarik = LocalDate.now(); 
+		// Declaring the date format
 		String dateStr = tarik.format(DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
 		
-		LocalTime dt = LocalTime.now();    // Declaring the time format
+		LocalTime dt = LocalTime.now();   
+		// Declaring the time format
 		String timeStr = dt.format(DateTimeFormatter.ofPattern("hh:mm:ss a"));
 		
-		ArrayList<String> trans = new ArrayList<String>();     // Declaring a new array
+		ArrayList<String> trans = new ArrayList<String>();    
+		// Declaring a new array
 		
-		Scanner sc = new Scanner(System.in);                // Importing the scanner class
+		Scanner sc = new Scanner(System.in);           
+		// Importing the scanner class
 		
-		while(currattempt<attempt)               // Limiting the number of attempts for entering correct password
+		while(currattempt<attempt)         
+			// Limiting the number of attempts for entering correct password
 		{
 			System.out.println("Enter your pin");
 			int pass = sc.nextInt();
-			if(pass==password)                // Checking if entered pin is same as the acccount pin
+			if(pass==password)               
+				// Checking if entered pin is same as the acccount pin
 			{
-				System.out.println("Do you want paper receipt");   // Asking if user wants to print receipt
+				System.out.println("Do you want paper receipt");
+				// Asking if user wants to print receipt
 				System.out.println("1. Yes");
 				System.out.println("2. No");
 				paper = sc.nextInt();
@@ -55,7 +66,8 @@ public class Task2 {
 		}
 		
 		
-		if(currattempt<5)     // Executing the main task if users enters correct password within limited attempts
+		if(currattempt<5) 
+			// Executing the main task if users enters correct password within limited attempts
 		{
 			while(flag==true)
 			{
@@ -72,7 +84,8 @@ public class Task2 {
 				
 				switch(option)
 				{
-					case 1:       // Option for transaction history
+					case 1:      
+						// Option for transaction history
 					{	
 						System.out.println("Your Transaction History");
 						for(String q: trans)
@@ -84,7 +97,8 @@ public class Task2 {
 					
 					
 					
-					case 2:     // Option for withdrawl
+					case 2:    
+						// Option for withdrawl
 					{
 						while(true)
 						{
@@ -127,7 +141,8 @@ public class Task2 {
 					
 					
 					
-					case 3:           // Option for deposit
+					case 3:          
+						// Option for deposit
 					{
 						while(true)
 						{
@@ -157,7 +172,8 @@ public class Task2 {
 					
 					
 					
-					case 4:      // Option for transfer
+					case 4:     
+						// Option for transfer
 					{
 						while(true)
 						{
